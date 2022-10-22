@@ -43,4 +43,41 @@ html, body {
     margin: 20px 0;
     border: 1px solid #ddd;
     padding: 20px;
+    overflow-y: scroll;
   }
+
+  
+  @media(max-width: 992px){
+    
+    input {
+      width: 300px;
+    }
+
+    button {
+      width: 300px;
+      
+    }
+
+    .messages {
+      width: 300px;
+    }
+
+  }
+
+  @media(width: 688px){
+
+    input {
+      width: 500px;
+    }
+
+    button {
+      width: 500px;
+      
+    }
+
+    .messages {
+      width: 500px;
+    }
+
+  }
+  
