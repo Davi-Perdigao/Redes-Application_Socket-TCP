@@ -10,51 +10,15 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js" integrity="sha512-iWPnCISAd/J+ZacwV2mbNLCaPGRrRo5OS81lKTVPtRg1wGTC20Cfmp5Us5RcbLv42QLdbAWl0MI57yox5VecQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <form id="chat">
-        <input type="text" name="username" placeholder="Digite seu usuário">
+        <input type="text" name="username" placeholder="Digite seu usuário" autocomplete="off">
         <div class="messages"></div>
-        <input type="text" name="message" placeholder="Digite sua mensagem" id="messages">
+        <input type="text" name="message" placeholder="Digite sua mensagem" id="messages" autocomplete="off">
         <button id="myBtn" type="submit">Enviar</button>
     </form>
-    <script type="text/javascript">
-        var socket = io('http://192.168.0.107:3000');
-
-        function renderMessege(message){
-            $('.messages').append('<div class="message"><strong>'+message.author+'</strong>:'+message.message+'</div>');
-        }
-
-        socket.on('previousMessages', function(messages){
-            for (messages of messages){
-                renderMessege(messages)
-            }
-        });
-
-        socket.on('receivedMessage', function(message){
-            renderMessege(message);
-        })
-
-
-        $('#chat').submit(function(event){
-            event.preventDefault();
-
-            var author = $('input[name=username]').val();
-            var message = $('input[name=message]').val();
-
-            if(author.length && message.length){
-                var messageObject = {
-                    author: author,
-                    message: message,
-                };
-                renderMessege(messageObject)
-                socket.emit('sendMessage', messageObject)
-
-                message = document.getElementById('messages');
-                message.value = "";
-            }
-        });
-    </script>
 </body>
 </html>
