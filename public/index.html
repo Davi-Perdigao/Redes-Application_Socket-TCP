@@ -16,11 +16,11 @@
     <form id="chat">
         <input type="text" name="username" placeholder="Digite seu usuário">
         <div class="messages"></div>
-        <input type="text" name="message" placeholder="Digite sua mensagem">
-        <button type="submit">Enviar</button>
+        <input type="text" name="message" placeholder="Digite sua mensagem" id="messages">
+        <button id="myBtn" type="submit">Enviar</button>
     </form>
     <script type="text/javascript">
-        var socket = io('http://localhost:3000');
+        var socket = io('http://192.168.0.107:3000');
 
         function renderMessege(message){
             $('.messages').append('<div class="message"><strong>'+message.author+'</strong>:'+message.message+'</div>');
@@ -35,7 +35,8 @@
         socket.on('receivedMessage', function(message){
             renderMessege(message);
         })
-        
+
+
         $('#chat').submit(function(event){
             event.preventDefault();
 
@@ -47,9 +48,11 @@
                     author: author,
                     message: message,
                 };
-                
                 renderMessege(messageObject)
                 socket.emit('sendMessage', messageObject)
+
+                message = document.getElementById('messages');
+                message.value = "";
             }
         });
     </script>
