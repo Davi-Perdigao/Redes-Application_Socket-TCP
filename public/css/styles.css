@@ -25,11 +25,13 @@ html, body {
   }
 
   .emoji{
+    background-color: #FFF;
     border: none;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     position: inherit;
-    
+    font-size: x-large;
+    color: #069;
   }
 
   .myBtn {
@@ -77,8 +79,8 @@ html, body {
     }
 
     .emoji{
-      width: 50px;
-      height: 50px;     
+      width: 0px;
+      height: 0px;     
     }
   }
 
@@ -99,7 +101,7 @@ html, body {
 
     .emoji{
       width: 20px;
-      height:20px;     
+      height: 20px;     
     }
 
   }
