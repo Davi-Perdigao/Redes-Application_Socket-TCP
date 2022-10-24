@@ -62,7 +62,7 @@ html, body {
 
 
   
-  @media(max-width: 992px){
+  @media(max-width: 650px){
     
     input {
       width: 300px;
@@ -77,6 +77,10 @@ html, body {
       width: 300px;
     }
 
+    .emoji{
+      width: 0px;
+      height: 0px;     
+    }
   }
 
   @media(width: 688px){
@@ -92,6 +96,11 @@ html, body {
 
     .messages {
       width: 500px;
+    }
+
+    .emoji{
+      width: 20px;
+      height:20px;     
     }
 
   }
