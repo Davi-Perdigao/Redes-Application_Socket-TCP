@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js" integrity="sha512-iWPnCISAd/J+ZacwV2mbNLCaPGRrRo5OS81lKTVPtRg1wGTC20Cfmp5Us5RcbLv42QLdbAWl0MI57yox5VecQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"
+        integrity="sha512-iWPnCISAd/J+ZacwV2mbNLCaPGRrRo5OS81lKTVPtRg1wGTC20Cfmp5Us5RcbLv42QLdbAWl0MI57yox5VecQg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/script.js"></script>
 </head>
+
 <body>
     <form id="chat">
-        <input type="text" name="username" placeholder="Digite seu usuário" autocomplete="off">
-        <div class="messages"></div>
-        <input type="text" name="message" placeholder="Digite sua mensagem" id="messages" autocomplete="off">
-        <button id="myBtn" type="submit">Enviar</button>
+        <div>
+            <input type="text" name="username" placeholder="Digite seu usuário" autocomplete="off" />
+            <div class="messages"></div>
+            <div>
+                <input type="text" name="message" placeholder="Digite sua mensagem" id="message" autocomplete="off" />
+                <button class="emoji" type="button">
+                    <img src="../assets/image/smile.png" alt="emoji" class="emoji">
+                </button>
+            </div>
+            <button class="myBtn" id="myBtn" type="submit">Enviar</button>
+        </div>
     </form>
 </body>
+<script src="js/emoji.js"></script>
+<script>
+    new EmojiPicker({
+        trigger: [
+            {
+                insertInto: ["#message"],
+                selector: ".emoji",
+            },
+        ],
+        closeButton: true,
+        dragButton: true,
+    });
+</script>
+
 </html>

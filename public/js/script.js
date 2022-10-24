@@ -29,7 +29,7 @@ var socket = io('http://192.168.0.107:3000');
                 renderMessege(messageObject)
                 socket.emit('sendMessage', messageObject)
 
-                message = document.getElementById('messages');
+                message = document.getElementById('message');
                 message.value = "";
             }
         });
