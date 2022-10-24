@@ -5,16 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat</title>
+    <title>Chat D&E</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    <!-- Adicionando jquery através de um link com script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Adicionando socket.io através de um link com script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"
         integrity="sha512-iWPnCISAd/J+ZacwV2mbNLCaPGRrRo5OS81lKTVPtRg1wGTC20Cfmp5Us5RcbLv42QLdbAWl0MI57yox5VecQg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Chamando arquivo css -->
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/script.js"></script>
 </head>
@@ -22,19 +25,19 @@
 <body>
     <form id="chat">
         <div>
-            <input type="text" name="username" placeholder="Digite seu usuário" autocomplete="off" />
-            <div class="messages"></div>
+            <input type="text" name="username" placeholder="Digite seu usuário" autocomplete="off" /> <!-- Input de nome do usuário -->
+            <div class="messages"></div> <!-- div onde as imagens irão aparecer -->
             <div>
-                <input type="text" name="message" placeholder="Digite sua mensagem" id="message" autocomplete="off" />
-                <button class="emoji" type="button">
+                <input type="text" name="message" placeholder="Digite sua mensagem" id="message" autocomplete="off" /> <!-- Input de nome do usuário -->
+                <button class="emoji" type="button"> <!-- botão para adicionar emoji às mensagens -->
                     <img src="../assets/image/smile.png" alt="emoji" class="emoji">
                 </button>
             </div>
-            <button class="myBtn" id="myBtn" type="submit">Enviar</button>
+            <button class="myBtn" id="myBtn" type="submit">Enviar</button> <!-- botão para enviar a mensagem -->
         </div>
     </form>
 </body>
-<script src="js/emoji.js"></script>
+<script src="js/emoji.js"></script> <!-- chamando script de emojis -->
 <script>
     new EmojiPicker({
         trigger: [
