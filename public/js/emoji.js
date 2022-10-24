@@ -1,5 +1,9 @@
-let customTab = null
+/*
+Configurando caixa de emojis em site ou aplicações npm. Aqui, nenhuma biblioteca externa é necessária,
+o CSS é pré-fabricado, e toda configuração consta apenas nesse arquivo
+*/
 
+let customTab = null
 
 const EmojiPicker = function(options) {
 
@@ -36,7 +40,7 @@ const EmojiPicker = function(options) {
         return {
 
             el: () => {
-                // Check if is node
+                // Checando se é Node
                 if (!el) {
                     return undefined;
                 } else if (el.nodeName) {
