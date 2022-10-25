@@ -20,7 +20,7 @@ O principal objetivo do trabalho é exemplificar para fins de estudo, o uso de s
 
 Para compilar a aplicação, basta que uma máquina inicialize o servidor. Primeiramente, como utilizamos um server em NodeJS, é necessário ter o nome instalado nessa máquina. Feito isso, clone o repositório e siga os seguintes passos:
 
-* Abra o seu Prompt de comando para descobrir o IP da sua Máquina. Para isso, digite o comando `ipconfig`
+* Abra o seu Prompt de Comando para descobrir o IP da sua Máquina. Para isso, digite o comando `ipconfig`
 
 * Localize a linha:
 ```js
