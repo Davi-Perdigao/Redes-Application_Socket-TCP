@@ -28,7 +28,7 @@ Endereço IPv4. . . . . . . .  . . . . . . . :
 ```
 Pronto, agora com a informação do IP da sua máquina, vamos ao repositório
 
-* No arquivo [script.js](https://github.com/Davi-Perdigao/Redes-Application_Socket-TCP/blob/main/public/js/script.js), altere na primeira linha o código com a informação do seu IP:
+* No arquivo [script.js](https://github.com/Davi-Perdigao/Redes-Application_Socket-TCP/blob/main/public/js/script.js), edite a primeira linha do código com a informação do seu IP:
 ```js
 var socket = io('http://XXX.XXX.XX.XX:3000');
 ```
