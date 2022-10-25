@@ -16,4 +16,27 @@ O principal objetivo do trabalho é exemplificar para fins de estudo, o uso de s
 - NodeJS
 - JavaScript, HTML e CSS
 
+## 📡 Como usar?
+
+Primeiramente, como utilizamos um server em NodeJS, é necessário ter o nome instalado em sua máquina. Feito isso, clone o repositório em sua máquina e siga os seguintes passos:
+
+* Abra o seu Prompt de comando para descobrir o IP da sua Máquina. Para isso, digite o comando `ipconfig`
+
+* Localize a linha:
+```js
+Endereço IPv4. . . . . . . .  . . . . . . . :
+```
+Pronto, agora com a informação do IP da sua máquina, vamos ao repositório
+
+* No arquivo [script.js](https://github.com/Davi-Perdigao/Redes-Application_Socket-TCP/blob/main/public/js/script.js), altere na primeira linha o código com a informação do seu IP:
+```js
+var socket = io('http://XXX.XXX.XX.XX:3000');
+```
+⚠ Não altere a porta :3000
+
+* Feito isso, agora basta abrir o terminal da aplicação e executar o comando `node server.js`
+
+✔ Pronto, agora a aplicação já está em execução. Agora, qualquer pessoa através de um computador, notebook ou smartphone pode conectar ao Chat apenas digitando o seu IP + :3000 (`XXX.XXX.XX.XX:3000`) em qualquer navegador. Através do terminal, é possível visualizar em tempo real os Sockets conectados:
+
+
 ## 📖 Referências
