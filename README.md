@@ -1,5 +1,5 @@
 # Chat Real-Time Socket.io-TCP
-ab
+abc
 ## ❓ O que é um Socket?
 
 Socket provê a comunicação entre duas pontas cliente-servidor (fonte e destino) - também conhecido como two-way communication - entre dois processos que estejam na mesma máquina (Unix Socket) ou na rede (TCP/IP Sockets). Na rede, a representação de um socket se dá por ip:porta, por exemplo: 127.0.0.1:4477 (IPv4). Um socket que usa rede é um Socket TCP/IP, que é o caso dessa aplicação.
