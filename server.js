@@ -19,13 +19,16 @@ let messages = []; //array para armazenar todas as mensagens recebidos, já que 
 
 //Definindo a forma de conexão do usuário com o servidor de socket
 io.on('connection', socket =>{ //toda vez que um novo cliente se conectar, recebemos o socket
-    console.log(`Socket conectado: ${socket.id}`);
+    const ip = socket.handshake.address // atribui para avariavel ip qual e o ip da maquina que esta acessando esse socket 
+    console.log(`Socket conectado: ${socket.id}`, `\nIp do Client: ${ip.replace('::ffff:','')}`);
 
     /*enviando todas as mensagens anteriores assim que o socket conectar na aplicação
     assim, as mensagens apenas serão perdidas se o servidor for reiniciado*/
     socket.emit('previousMessages', messages); 
 
     socket.on('sendMessage', data =>{ //"ouvir" evento e dados do front-end
+        data['ip'] = ip.replace('::ffff:','');//armazena o ip da maquina dendo do Dicionario onde esta todas as minhas informaçoes como Author, Mensagem e Ip 
+        console.log(data)// Informa no console qual foi a mensagem, por quem foi encaminhada e qual o ip de origem de envio 
         messages.push(data); //armazenando as mensagens no array
         socket.broadcast.emit('receivedMessage', data); //enviando mensagem para todos conectados na aplicação
     });
