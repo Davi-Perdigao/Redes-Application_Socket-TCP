@@ -1,4 +1,4 @@
-# Chat Real-Time Socket.io-TCPabcdefgg
+# Chat Real-Time Socket.io-TCP
 
 ## ❓ O que é um Socket?
 
