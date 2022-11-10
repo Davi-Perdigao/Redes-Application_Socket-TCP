@@ -4,7 +4,7 @@ function renderMessege(message){ //função para renderizar as mensagens na tela
     $('.messages').append('<div class="message"><strong>'+message.author+'</strong>:'+message.message+'</div>');
 }
 
-socket.on('previousMessages', function(messages){ //"ouvindo" evento emitido pelo back-end e percorrendo array de mensagens 
+socket.on('previousMessages', function(messages){ //"escutando" evento emitido pelo back-end e percorrendo array de mensagens 
     for (messages of messages){
         renderMessege(messages)
     }
