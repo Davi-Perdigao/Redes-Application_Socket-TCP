@@ -1,4 +1,4 @@
-var socket = io('http://192.168.0.107:3000');
+var socket = io('http://20.103.0.46:3000');
 
 function renderMessege(message){ //função para renderizar as mensagens na tela com jquery
     $('.messages').append('<div class="message"><strong>'+message.author+'</strong>:'+message.message+'</div>');
