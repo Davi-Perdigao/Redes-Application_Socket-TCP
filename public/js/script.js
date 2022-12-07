@@ -21,7 +21,7 @@ $('#chat').submit(function(event){ //verificando quando o chat for submitado
     var message = $('input[name=message]').val(); //recebendo a mensagem
 
     if(author.length && message.length){ //verificando se existe username ou mensagem informados
-        var messageObject = { //enviando um objeto por web socket, não nos limitando a strings ou int, podemos enviar arrays  etc.
+        var messageObject = { //enviando um objeto por web socket, não nos limitando a strings ou int, podemos enviar arrays, etc.
             author: author,
             message: message,
             'ip': '',
