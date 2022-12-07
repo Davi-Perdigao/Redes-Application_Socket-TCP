@@ -38,10 +38,14 @@ var socket = io('http://XXX.XXX.XX.XX:3000');
 
 ✔ Pronto, agora a aplicação já está em execução. Agora, qualquer pessoa através de um computador, notebook ou smartphone pode conectar ao Chat apenas digitando o seu IP + :3000 (`XXX.XXX.XX.XX:3000`) em qualquer navegador. Através do terminal, é possível visualizar em tempo real os Sockets conectados:
 
-![Socket Conectado](https://github.com/Davi-Perdigao/Redes-Application_Socket-TCP/blob/main/public/img_readme.png)
-
-## 👁️ Resultado Final:
-
- ![x]()
+![Aplicação e Terminal](https://github.com/Davi-Perdigao/Redes-Application_Socket-TCP/blob/main/public/images/app_terminal.png)
 
 ## 📖 Referências
+
+* GABRIEL, João. Comunicação cliente-servidor em tempo real com Socket.io. Disponível em: <https://medium.com/digitalproductsdev/comunica%C3%A7%C3%A3o-cliente-servidor-em-tempo-real-com-socket-io-9d3930484b80>. Acesso em: 27 de outubro de 2022.
+
+* MATHIAS, Pedro. Aplicações Real Time com Node.js. Disponível em: <https://blog.getty.io/aplica%C3%A7%C3%B5es-real-time-com-node-js-8389dae329be>. Acesso em: 27 de outubro de 2022.
+
+* SOCKET.IO, versão 4.x. Documentação - Introdução ao Socket.io. Disponível em: <https://socket.io/pt-br/docs/v4/>. Acesso em: 03 de novembro de 2022.
+
+* THEARCANE. Biblioteca de Emojis - emoji.js. Disponível em: <https://github.com/AnonymousXC/emoji.js>. Acesso em: 10 de novembro de 2022.
